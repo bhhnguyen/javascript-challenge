@@ -18,7 +18,7 @@ function filterData(){
     tbody.html("");
     var inputElement = d3.select("#datetime");
     var inputValue = inputElement.property("value");
-    var newData = tableData.filter(elem => elem.datetime = inputValue);
+    var newData = tableData.filter(elem => elem.datetime === inputValue);
     newData.forEach((ufoData) => {
         var row = tbody.append("tr");
         Object.entries(ufoData).forEach(([key, value]) => {
